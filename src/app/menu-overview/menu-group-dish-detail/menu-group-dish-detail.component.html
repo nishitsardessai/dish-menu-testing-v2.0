@@ -1,0 +1,135 @@
+<div class="md-content" flex md-scroll-y class="content-menu-group-detailed-children">
+
+  <div flex>
+    <div layout="row">
+
+      <div flex="25">
+
+
+        <div layout="column" layout-align="start stretch" class="action-button">
+          <button md-raised-button color="primary" (click)="addMenuItemToMenuGroupRouter()">ADD DISH</button>
+
+        </div>
+
+
+
+
+        <div layout="column" layout-align="start stretch" class="help-panel-menu-group-detailed-children">
+          <h3>
+            <md-icon>format_align_left</md-icon>
+            Help
+          </h3>
+          <p>An overview of basic form styles and elements.</p>
+
+          <md-list>
+            <md-list-item> Action 1</md-list-item>
+            <md-divider></md-divider>
+
+          </md-list>
+
+
+        </div>
+
+
+      </div>
+
+      <div flex="75">
+        <md-card>
+
+          <md-card-title>Dish Description </md-card-title>
+          <md-card-subtitle>Bacon ipsum dolor amet salami jerky sirloin, picanha short ribs pork chop leberkas pig
+            shankle.
+          </md-card-subtitle>
+          <md-divider></md-divider>
+          <md-card-content>
+
+
+            <!-- Image uploading    -->
+          <div class="button-row">
+            <input md-raised-button type="file" ng2FileSelect [uploader]="uploader" accept="image/*;capture=camera">
+              <button primary md-raised-button  (click)="upload()"> Upload </button>
+          </div>
+          <cl-image [public-id]="imageId" [cloud-name]="uploader.cloudName" width="300" height="300"></cl-image>
+
+            <!-- list with Icons-->
+
+            <div layout="column" layout-align="start stretch">
+            <!--   <table td-data-table>
+
+
+                <th td-data-table-column>
+               {{MenuGroupItem.menu_item_name}}
+                </th> -->
+
+                
+<!-- 
+                <tr td-data-table-row ">
+						                 menu_item_description: string;
+						  menu_item_price: number;
+
+
+						  enabled: boolean;
+
+
+						  special: boolean;
+						  vegetarian: boolean;
+						  vegan: boolean;
+						  kosher: boolean;
+						  halal: boolean;
+						  gluten_free: boolean;
+
+						  menu_item_calories: number;
+						  menu_item_heat_index: number;
+
+					<h3>Item Description</h3>
+                  <td td-data-table-cell > {{MenuGroupItem.menu_item_description}}
+                  </td>
+                  </tr>
+ -->
+                 <!--  <tr td-data-table-row ">
+                  <h3>Item Price</h3>
+				  <td td-data-table-cell > {{MenuGroupItem.menu_item_price}}
+				  </td>
+				  </tr>
+
+				  <tr td-data-table-row ">
+				  <h3>Calories</h3>
+				  <td td-data-table-cell > {{MenuGroupItem.menu_item_calories}
+                  </td>
+                  </tr>
+
+                  <tr td-data-table-row ">
+                  <h3>Heat Index</h3>
+                  <td td-data-table-cell > {{MenuGroupItem.menu_item_heat_index}
+                  </td>
+                  </tr>
+
+ -->
+ 				
+                  
+
+            <!--     
+              </table> -->
+              <select [(ngModel)]="menuGroupItem">
+              	 {{menuGroupItem.menu_item_price}}
+              </select>
+             
+             
+
+            </div>
+
+          </md-card-content>
+
+
+        </md-card>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+
